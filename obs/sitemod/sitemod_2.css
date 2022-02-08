@@ -1,0 +1,34 @@
+html.beacon-fullpage #beacon-container {
+  height: 100% !important;
+}
+
+div#beacon-header {
+  z-index: 666;
+  position: absolute;
+  right: 0;
+  border-radius: 0px 0px 0px 2px;
+}
+
+a.install-branch-link {
+    display: none !important;
+}
+
+div#beacon-info {
+  display: none !important;
+}
+
+div#avatar-banner {
+  display: none !important;
+}
+
+footer#global-footer {
+  display: none !important;
+}
+
+div#status-container {
+  display: none !important;
+}
+
+div#beacon-stats-area {
+  display: none !important;
+}

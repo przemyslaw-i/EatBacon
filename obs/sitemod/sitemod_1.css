@@ -1,0 +1,58 @@
+div#beacon-header {
+  z-index: 666;
+  position: absolute;
+  right: 0;
+  height: 100px;
+}
+
+a.install-branch-link {
+    display: none !important;
+}
+
+div#beacon-stats-area {
+  order: 0 !important;
+  height: 100px;
+}
+
+div#beacon-info {
+  display: none !important;
+}
+
+div#avatar-banner {
+  display: none !important;
+}
+
+footer#global-footer {
+  display: none !important;
+}
+
+html.beacon-fullpage #beacon-stats-area #beacon-stats>.inline-stats {
+  display: flex !important;
+}
+
+div#status-container {
+  display: none !important;
+}
+
+.list-stats.inline-stats .stat-text {
+  font-size: 32px;
+  font-weight: bolder;
+}
+  
+.list-stats.inline-stats .stat-subtext {
+  font-weight: normal;
+}
+
+.list-stats.inline-stats {
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 147px;
+}
+
+html.beacon-fullpage #beacon-container {
+  height: 100% !important;
+}
+
+#beacon-container.activity-finished .list-stats.inline-stats {
+  margin-right: 0px;
+}
