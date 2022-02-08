@@ -1,0 +1,17 @@
+{
+    "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36",
+    "sleep": 1,
+    "statuses": {
+        "0": "Unknown",
+        "1": "Running",
+        "3": "Stopped",
+        "6": "Finished",
+        "7": "Prepared"
+    },
+    "outputs": {
+        "file" : {
+            "fn_prefix": "data_output_"
+        },
+        "stdout": "true"
+    }
+}
