@@ -77,6 +77,7 @@ function start_stop_toggle()
         print("Logic stopped.")
     else
         started = true
+        last_distance = 0.0
         obs.timer_add(check_timer_callback, check_time)
         print("Logic started.")
     end
