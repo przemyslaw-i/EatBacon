@@ -146,7 +146,7 @@ class EatBacon:
                 )
                 EatBacon.write(
                     f"{self._dir}/{cfg['fn_prefix']}distance_km_only.txt",
-                    f"{pdp[3]:.2f}"
+                    f"{pdp[3]}"
                 )
                 EatBacon.write(
                     f"{self._dir}/{cfg['fn_prefix']}moving_time.txt",
