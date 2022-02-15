@@ -94,9 +94,9 @@ class Gui:
                 text=self._eb.get_status(bacon[0])
             )
             self._widgets["dist_val_lbl"].configure(text=f"{bacon[1]:.2f}m")
-            self._widgets["moving_val_lbl"].configure(text=f"{bacon[2]}s")
-            self._widgets["elapsed_val_lbl"].configure(text=f"{bacon[3]}s")
-            self._widgets["batt_val_lbl"].configure(text=f"{bacon[4]}%")
+            self._widgets["moving_val_lbl"].configure(text=f"{bacon[4]}s")
+            self._widgets["elapsed_val_lbl"].configure(text=f"{bacon[5]}s")
+            self._widgets["batt_val_lbl"].configure(text=f"{bacon[6]}%")
         # Make output
         self._eb.make_output(bacon)
         # Set next timer

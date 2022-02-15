@@ -30,6 +30,8 @@ class EatBacon:
             return (
                 dp_prs.get('status', 0),
                 dp_prs.get('stats', {}).get('distance', 0.0),
+                dp_prs.get('stats', {}).get('distance', 0.0) / 1000,
+                int(dp_prs.get('stats', {}).get('distance', 0.0) / 1000),
                 dp_prs.get('stats', {}).get('moving_time', 0),
                 dp_prs.get('stats', {}).get('elapsed_time', 0),
                 dp_prs.get('battery_level', 0)
@@ -139,23 +141,32 @@ class EatBacon:
                     f"{pdp[1]:.2f}"
                 )
                 EatBacon.write(
+                    f"{self._dir}/{cfg['fn_prefix']}distance_km.txt",
+                    f"{pdp[2]:.2f}"
+                )
+                EatBacon.write(
+                    f"{self._dir}/{cfg['fn_prefix']}distance_km_only.txt",
+                    f"{pdp[3]:.2f}"
+                )
+                EatBacon.write(
                     f"{self._dir}/{cfg['fn_prefix']}moving_time.txt",
-                    f"{pdp[2]}"
+                    f"{pdp[4]}"
                 )
                 EatBacon.write(
                     f"{self._dir}/{cfg['fn_prefix']}elapsed_time.txt",
-                    f"{pdp[3]}"
+                    f"{pdp[5]}"
                 )
                 EatBacon.write(
                     f"{self._dir}/{cfg['fn_prefix']}battery.txt",
-                    f"{pdp[4]}"
+                    f"{pdp[6]}"
                 )
             # Stdout output - Write metrics in nice form on stdout
             elif out == "stdout":
                 print(', '.join([
                     f"Status: {self._cfg['statuses'][str(pdp[0])]}",
                     f"Distance: {pdp[1]:.2f}m",
-                    f"Moving time: {pdp[2]}s",
-                    f"Elapsed time: {pdp[3]}s",
-                    f"Battery: {pdp[4]}%"
+                    f"Distance KM: {pdp[2]:.2f}m",
+                    f"Moving time: {pdp[4]}s",
+                    f"Elapsed time: {pdp[5]}s",
+                    f"Battery: {pdp[6]}%"
                 ]))
